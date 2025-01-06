@@ -12,25 +12,40 @@
       <caption>Patient Meal Tracker</caption>
       <thead>
         <tr>
-          <th class="primary" id="date-el">"Date Placeholder</th>
-          <th class="primary">Floor</th>
-          <th class="primary">Joushouku</th>
-          <th class="primary">Hitokochidai</th>
-          <th class="primary">Kizami</th>
-          <th class="primary">Ara-Kizami</th>
-          <th class="primary">Softo</th>
-          <th class="primary">Mikisa</th>
-          <th class="primary">Makanai</th>
-          <th class="primary">Shokoinshoku</th>
-          <th class="primary">Kenshoku/Yuushoku</th>
-          <th class="primary">Yobi</th>
-          <th class="primary">Total</th>
+          <th class="heading-primary" id="date-el">"Date Placeholder</th>
+          <th class="column-heading">Floor</th>
+          <th class="column-heading">Joushouku</th>
+          <th class="column-heading">Hitokochidai</th>
+          <th class="column-heading">Kizami</th>
+          <th class="column-heading">Ara-Kizami</th>
+          <th class="column-heading">Softo</th>
+          <th class="column-heading">Mikisa</th>
+          <th class="column-heading">Makanai</th>
+          <th class="column-heading">Shokoinshoku</th>
+          <th class="column-heading">Kenshoku/Yuushoku</th>
+          <th class="column-heading">Yobi</th>
+          <th class="column-heading">Total</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>Asa</th>
-          <td class="data-cells">Both Floor</td>
+          <th class="row-heading">Asa</th>
+          <td class="floor-cell">Both Floor</td>
+          <td class="data-cells" id="asa-joushouku"></td>
+          <td class="data-cells"></td>
+          <td class="data-cells"></td>
+          <td class="data-cells"></td>
+          <td class="data-cells"></td>
+          <td class="data-cells"></td>
+          <td class="data-cells"></td>
+          <td class="data-cells"></td>
+          <th class="data-cells"></th>
+          <th class="data-cells"></th>
+          <th class="data-cells"></th>
+        </tr>
+        <tr>
+          <th class="row-heading">Hiru</th>
+          <td class="floor-cell">Both Floor</td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
@@ -44,8 +59,8 @@
           <th class="data-cells"></th>
         </tr>
         <tr>
-          <th>Hiru</th>
-          <td class="data-cells">Both Floor</td>
+          <th rowspan="2" class="row-heading">Oyatsu</th>
+          <td class="floor-cell">2f</td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
@@ -59,22 +74,7 @@
           <th class="data-cells"></th>
         </tr>
         <tr>
-          <th rowspan="2">Oyatsu</th>
-          <td class="data-cells">2f</td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-        </tr>
-        <tr>
-          <td class="data-cells">3f</td>
+          <td class="floor-cell">3f</td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
@@ -88,8 +88,8 @@
           <td class="data-cells"></td>
         </tr>
         <tr>
-          <th>Yoru</th>
-          <td class="data-cells">Both Floor</td>
+          <th class="row-heading">Yoru</th>
+          <td class="floor-cell">Both Floor</td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
           <td class="data-cells"></td>
@@ -105,5 +105,6 @@
       </tbody>
     </table>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
