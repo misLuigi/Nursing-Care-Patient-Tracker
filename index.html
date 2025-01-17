@@ -106,18 +106,18 @@
     </table>
   </div>
   <div class="btn-container">
-    <button id="new-patient-btn" onclick="newBtn()">New Patient</button>
+    <button id="new-patient-btn">New Patient</button>
     <button id="stop-meal-btn">Stop Meal</button>
     <button id="change-btn">Change</button>
   </div>
-
+<form id="form">
   <div class="form-container">
     <label for="patient-name">Patient Name</label>
     <input type="text" id="patient-name" placeholder="Enter Patient Name">
   </div>
   <div class="form-container">
-    <label for="patient-room-numner">Patient Room Number</label>
-    <input type="number" id="patient-room-numner" placeholder="Enter Patient Room Number">
+    <label for="patient-room-number">Patient Room Number</label>
+    <input type="number" id="patient-room-number" placeholder="Enter Patient Room Number">
   </div>
   <div class="form-container">
     <label for="second-or-third-floor">Second or Third Floor</label>
@@ -138,8 +138,8 @@
     <input type="radio" id="type-of-food" name="type-of-food" value="Mikisa">Mikisa
   </div>
   <div class="form-container">
-    <label for="prhibition">Prohibition</label>
-    <input type="text" id="prhibition" placeholder="Enter Prohibition">
+    <label for="prohibition">Prohibition</label>
+    <input type="text" id="prohibition" placeholder="Enter Prohibition">
   </div>
   <div class="allergies">
     <label for="allergies">Allergies</label>
@@ -147,9 +147,15 @@
   </div>
   <div class="options-comment">
     <label for="options">Options</label>
-    <input type="text" id="options-comment" placeholder="Enter Options Comment">
+    <input type="text" id="options" placeholder="Enter Options Comment">
   </div>
-  
+  <div class="button">
+    <button id="add-btn">Click to Add</button>
+  </div>
+  <div class="msg-panel">
+    <p id="msg"></p>
+  </div>
+</form>
   <script src="index.js"></script>
 </body>
 </html>
