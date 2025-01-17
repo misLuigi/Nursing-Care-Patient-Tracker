@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Patient Tracker</title>
+  <title>Patient Meal Tracker</title>
 </head>
 <body>
   <div class="container">
@@ -12,12 +12,12 @@
       <caption>Patient Meal Tracker</caption>
       <thead>
         <tr>
-          <th class="heading-primary" id="date-el">"Date Placeholder</th>
+          <th class="heading-primary" id="date-el">"Date Placeholder"</th>
           <th class="column-heading">Floor</th>
           <th class="column-heading">Joushouku</th>
           <th class="column-heading">Hitokochidai</th>
           <th class="column-heading">Kizami</th>
-          <th class="column-heading">Ara-Kizami</th>
+          <th class="column-heading">Kizami Toromi</th>
           <th class="column-heading">Softo</th>
           <th class="column-heading">Mikisa</th>
           <th class="column-heading">Makanai</th>
@@ -110,11 +110,46 @@
     <button id="stop-meal-btn">Stop Meal</button>
     <button id="change-btn">Change</button>
   </div>
-    <div class="modal" id="new-patient-modal">
-    <p id="work-flow-console"></p>
-    <input type="text" id="input" name="Patient-Name">
-    <button id="save-btn">Save Input</button>
+
+  <div class="form-container">
+    <label for="patient-name">Patient Name</label>
+    <input type="text" id="patient-name" placeholder="Enter Patient Name">
   </div>
+  <div class="form-container">
+    <label for="patient-room-numner">Patient Room Number</label>
+    <input type="number" id="patient-room-numner" placeholder="Enter Patient Room Number">
+  </div>
+  <div class="form-container">
+    <label for="second-or-third-floor">Second or Third Floor</label>
+    <input type="radio" id="second-or-third-floor" name="second-or-third-floor" value="2f">2f
+    <input type="radio" id="second-or-third-floor" name="second-or-third-floor" value="3f">3f
+  </div>
+  <div class="form-container">
+    <label for="rice-preference">Rice Preference</label>
+    <input type="text" id="rice-preference" placeholder="Enter Rice Preference">
+  </div>
+  <div class="form-container">
+    <label for="type-of-food">Type of Food</label>
+    <input type="radio" id="type-of-food" name="type-of-food" value="Joushouku">Joushouku
+    <input type="radio" id="type-of-food" name="type-of-food" value="Bite Size">Bite Size
+    <input type="radio" id="type-of-food" name="type-of-food" value="Kizami">Kizami
+    <input type="radio" id="type-of-food" name="type-of-food" value="Kizami Toromi">Kizami Toromi
+    <input type="radio" id="type-of-food" name="type-of-food" value="Soft">Soft
+    <input type="radio" id="type-of-food" name="type-of-food" value="Mikisa">Mikisa
+  </div>
+  <div class="form-container">
+    <label for="prhibition">Prohibition</label>
+    <input type="text" id="prhibition" placeholder="Enter Prohibition">
+  </div>
+  <div class="allergies">
+    <label for="allergies">Allergies</label>
+    <input type="text" id="allergies" placeholder="Enter Allergies">
+  </div>
+  <div class="options-comment">
+    <label for="options">Options</label>
+    <input type="text" id="options-comment" placeholder="Enter Options Comment">
+  </div>
+  
   <script src="index.js"></script>
 </body>
 </html>
