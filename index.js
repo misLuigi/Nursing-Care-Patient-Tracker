@@ -1,4 +1,6 @@
 // Description: This file is used to handle the logic for the patient form.
+
+// necessary variables and elements.
 const patientName = document.getElementById("patient-name");
 console.log(patientName);
 const patientRoomNumber = document.getElementById("patient-room-number");
@@ -20,6 +22,7 @@ console.log(addBtn);
 const msgPanel = document.getElementById("msg");
 console.log(msgPanel);
 
+// Array to store the patient data
 let patientData = [];
 
 // Add patient event
@@ -38,6 +41,9 @@ const addPatient = (e) => {
   patientData.push(patient);
   document.forms[0].reset();
 
+  // Save the data to local storage as a string
+  localStorage.setItem('patientData', JSON.stringify(patientData));
+
   // Display the message
   console.warn('added', {patientData});
   msgPanel.textContent = '\n' + JSON.stringify(patientData, '\t', 2);
@@ -46,3 +52,4 @@ const addPatient = (e) => {
 document.addEventListener('DOMContentLoaded', () => {
   addBtn.addEventListener('click', addPatient);
 });
+
