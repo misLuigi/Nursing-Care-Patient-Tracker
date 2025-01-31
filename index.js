@@ -1,5 +1,25 @@
 // Description: This file is used to handle the logic for the patient form.
 
+// Firebase code starts here.
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+import { getDatabase,
+          ref,
+          push,
+          onValue
+        } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
+
+const firebaseConfig = {
+    databaseURL: "https://patient-meal-tracker-default-rtdb.asia-southeast1.firebasedatabase.app/"
+}
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app)
+const referenceInDB = ref(database, "patientData")
+
+onValue(referenceInDB, function(snapshot) {
+    console.log(snapshot.val())
+})
+
 // necessary variables and elements.
 const patientName = document.getElementById("patient-name");
 console.log(patientName);
@@ -23,7 +43,7 @@ const msgPanel = document.getElementById("msg");
 console.log(msgPanel);
 
 // Array to store the patient data
-let patientData = [];
+
 
 // Add patient event
 const addPatient = (e) => {
@@ -38,15 +58,13 @@ const addPatient = (e) => {
     allergies: allergies.value,
     options: options.value
   }
-  patientData.push(patient);
+  
+  push(referenceInDB, patient)
   document.forms[0].reset();
 
-  // Save the data to local storage as a string
-  localStorage.setItem('patientData', JSON.stringify(patientData));
 
   // Display the message
-  console.warn('added', {patientData});
-  msgPanel.textContent = '\n' + JSON.stringify(patientData, '\t', 2);
+  //console.warn('added', {patient});
 }
 
 document.addEventListener('DOMContentLoaded', () => {
