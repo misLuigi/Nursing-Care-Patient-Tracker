@@ -4,158 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Patient Meal Tracker</title>
+  <title>Spending Tracker</title>
 </head>
 <body>
-  <div class="container">
-    <table>
-      <caption>Patient Meal Tracker</caption>
-      <thead>
-        <tr>
-          <th class="heading-primary" id="date-el">"Date Placeholder"</th>
-          <th class="column-heading">Floor</th>
-          <th class="column-heading">Joushouku</th>
-          <th class="column-heading">Hitokochidai</th>
-          <th class="column-heading">Kizami</th>
-          <th class="column-heading">Kizami Toromi</th>
-          <th class="column-heading">Softo</th>
-          <th class="column-heading">Mikisa</th>
-          <th class="column-heading">Makanai</th>
-          <th class="column-heading">Shokoinshoku</th>
-          <th class="column-heading">Kenshoku/Yuushoku</th>
-          <th class="column-heading">Yobi</th>
-          <th class="column-heading">Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th class="row-heading">Asa</th>
-          <td class="floor-cell">Both Floor</td>
-          <td class="data-cells" id="asa-joushouku"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-        </tr>
-        <tr>
-          <th class="row-heading">Hiru</th>
-          <td class="floor-cell">Both Floor</td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-        </tr>
-        <tr>
-          <th rowspan="2" class="row-heading">Oyatsu</th>
-          <td class="floor-cell">2f</td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-        </tr>
-        <tr>
-          <td class="floor-cell">3f</td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-        </tr>
-        <tr>
-          <th class="row-heading">Yoru</th>
-          <td class="floor-cell">Both Floor</td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <td class="data-cells"></td>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-          <th class="data-cells"></th>
-        </tr>
-      </tbody>
-    </table>
+  <header class="heading-primary" id="heading-title">
+    <div class="logo-icon" id="icon">$(+)</div>
+    <h1 id="header-title">My Spending Tracker</h1>
+  </header>
+  <div class="button-section">
+    <button id="add-spending-el">Add Spending</button>
+    <button id="delete-btn-el">Delete Spending</button>
   </div>
-  <div class="btn-container">
-    <button id="new-patient-btn">New Patient</button>
-    <button id="stop-meal-btn">Stop Meal</button>
-    <button id="change-btn">Change</button>
-  </div>
-<form id="form">
-  <div class="form-container">
-    <label for="patient-name">Patient Name</label>
-    <input type="text" id="patient-name" placeholder="Enter Patient Name">
-  </div>
-  <div class="form-container">
-    <label for="patient-room-number">Patient Room Number</label>
-    <input type="number" id="patient-room-number" placeholder="Enter Patient Room Number">
-  </div>
-  <div class="form-container">
-    <label for="second-or-third-floor">Second or Third Floor</label>
-    <input type="radio" id="second-or-third-floor" name="second-or-third-floor" value="2f">2f
-    <input type="radio" id="second-or-third-floor" name="second-or-third-floor" value="3f">3f
-  </div>
-  <div class="form-container">
-    <label for="rice-preference">Rice Preference</label>
-    <input type="text" id="rice-preference" placeholder="Enter Rice Preference">
-  </div>
-  <div class="form-container">
-    <label for="type-of-food">Type of Food</label>
-    <input type="radio" id="type-of-food" name="type-of-food" value="Joushouku">Joushouku
-    <input type="radio" id="type-of-food" name="type-of-food" value="Bite Size">Bite Size
-    <input type="radio" id="type-of-food" name="type-of-food" value="Kizami">Kizami
-    <input type="radio" id="type-of-food" name="type-of-food" value="Kizami Toromi">Kizami Toromi
-    <input type="radio" id="type-of-food" name="type-of-food" value="Soft">Soft
-    <input type="radio" id="type-of-food" name="type-of-food" value="Mikisa">Mikisa
-  </div>
-  <div class="form-container">
-    <label for="prohibition">Prohibition</label>
-    <input type="text" id="prohibition" placeholder="Enter Prohibition">
-  </div>
-  <div class="allergies">
-    <label for="allergies">Allergies</label>
-    <input type="text" id="allergies" placeholder="Enter Allergies">
-  </div>
-  <div class="options-comment">
-    <label for="options">Options</label>
-    <input type="text" id="options" placeholder="Enter Options Comment">
-  </div>
-  <div class="button">
-    <button id="add-btn">Click to Add</button>
-  </div>
-  <div class="msg-panel">
-    <p id="msg"></p>
-  </div>
-</form>
-  <script type="module" src="index.js"></script>
+  <dialog class="modal-overlay">
+    <div class="modal-container">
+      <form class="form" method="dialog">
+        <label for="name-of-item">What did you buy?</label><br>
+        <input type="text" id="name-of-item" name="name-of-item"><br>
+        <label for="cost-of-item">How much?</label><br>
+        <input type="number" id="cost-of-item" name="cost-of-item"><br>
+        <label class="payment-method">What did you use as payment method?</label><br>
+        <input type="radio" id="cash" name="payment-method" value="Cash">
+        <label for="cash">Cash</label><br>
+        <input type="radio" id="card" name="payment-method" value="Cash">
+        <label for="card">Card</label><br>
+        
+        
+        <input type="submit" value="submit">
+      </form>
+      <button class="close-overlay-btn">
+        <i class="fas fa-times">close</i>
+      </button>
+    </div>
+  </dialog>
+  <section class="dashboard-panel-el">
+    
+  </section>
+  
+  <script src="index.js"></script>
 </body>
 </html>
