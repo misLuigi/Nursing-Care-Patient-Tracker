@@ -15,11 +15,17 @@
     <button id="add-spending-el">Add Spending</button>
     <button id="delete-btn-el">Delete Spending</button>
   </div>
+  <!--start of modal section-->
   <dialog class="modal-overlay">
     <div class="modal-container">
+      <button class="close-overlay-btn">
+        &times;
+      </button>
       <form class="form" method="dialog">
         <label for="name-of-item">What did you buy?</label><br>
         <input type="text" id="name-of-item" name="name-of-item"><br>
+        <label for="where">Where did you buy?</label><br>
+        <input type="text" id="where" name="where"><br>
         <label for="cost-of-item">How much?</label><br>
         <input type="number" id="cost-of-item" name="cost-of-item"><br>
         <label class="payment-method">What did you use as payment method?</label><br>
@@ -27,17 +33,13 @@
         <label for="cash">Cash</label><br>
         <input type="radio" id="card" name="payment-method" value="Cash">
         <label for="card">Card</label><br>
-        
-        
-        <input type="submit" value="submit">
+        <button class="submit-btn" type="submit">Submit</button>
       </form>
-      <button class="close-overlay-btn">
-        <i class="fas fa-times">close</i>
-      </button>
     </div>
   </dialog>
+  <!--end of modal section-->
   <section class="dashboard-panel-el">
-    
+    <p id="panel-el"></p>
   </section>
   
   <script src="index.js"></script>

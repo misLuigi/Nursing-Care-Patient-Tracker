@@ -26,13 +26,55 @@ console.log(modalOverlay)
 const closeOverlayBtn = document.querySelector(".close-overlay-btn")
 console.log(closeOverlayBtn)
 
+// variables and elements of form and its values.
+const nameOfItem = document.getElementById("name-of-item")
+console.log(nameOfItem)
+const placeToBuy = document.getElementById("where")
+console.log(placeToBuy)
+const cost = document.getElementById("cost-of-item")
+console.log(cost)
+
+
+const submitBtn = document.querySelector(".submit-btn")
+console.log(submitBtn)
+
+// opens the modal for adding new item.
 addSpendingBtn.addEventListener("click", function() {
   modalOverlay.showModal();
 })
-
+// closes the modal. but, clicking the 'submit' button will also do the same thing.
 closeOverlayBtn.addEventListener("click", function() {
   modalOverlay.close();
 })
+
+//functions:
+let newData = [] // data will be store in this array when addItem event is successful.
+const addItem = (event) => {
+  event.preventDefault();
+  const paymentMethod = document.querySelector('input[name = "payment-method"]:checked') // this get the selected value of the radio button. and it should be inside the scope of this event.
+  console.log(paymentMethod)
+  let newItems = {
+    name: nameOfItem.value,
+    store: placeToBuy.value,
+    price: cost.value,
+    methodOfPayment: paymentMethod ? paymentMethod.value : null // check if one of the radio button is selected.
+  }
+
+  newData.push(newItems)
+  console.log(newData)
+  document.forms[0].reset();
+
+  modalOverlay.close();
+  
+  const panel = document.getElementById("panel-el")
+console.log(panel.textContent = JSON.stringify(newData))
+}
+// this listen for the event that when submit button is clicked, then the addItem event will be push to newData array.
+document.addEventListener('DOMContentLoaded', () => {
+  submitBtn.addEventListener('click', addItem);
+})
+
+
 
 // onValue section. 
 /*onValue(referenceInDB, function(snapshot) {
