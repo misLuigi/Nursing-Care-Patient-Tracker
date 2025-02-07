@@ -26,3 +26,37 @@ body {
   margin-left: auto;
   margin-right: 0;
 }
+
+#add-spending-el, #delete-btn-el {
+  border: 2px solid green;
+  border-radius: 5px;
+  background-color: antiquewhite;
+  padding: 10px 30px;
+  margin: 10px 15px;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+.modal-overlay {
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px green;
+  background-color: antiquewhite;
+
+}
+
+.submit-btn {
+  border: 2px solid green;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: 10px;
+}
+
+.dashboard-panel-el {
+  width: 400px;
+  height: auto;
+  background-color: antiquewhite;
+  border: 2px solid green;
+  display: block;
+  margin-inline: auto;
+  margin-top: 50px;
+}
