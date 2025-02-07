@@ -1,40 +1,83 @@
 body {
   margin: 0;
   padding: 0;
-  
+  font-family: "Luckiest Guy", sans-serif;
+  background-color: rgb(220, 244, 220);
+}
+
+.whole-container {
+  border: 5px solid green;
+  border-radius: 20px;
+  max-width: 450px;
+  min-width: 450px;
+  margin-top: 30px;
+  margin-inline: auto;
+  background-color: rgb(118, 251, 127);
+  padding: 10px;
 }
 
 .heading-primary {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin: 20px;
+  border-bottom: 2px solid green;
+  margin-bottom: 50px;
 }
 
 .logo-icon {
-  padding: 15px;
-  font-size: 40px;
+  background-image: url("DALL·E 2025-02-07 15.05.02 - A playful and friendly logo for an app called 'Spending Tracker'. The logo features a stylized wallet with coins and bills popping out, symbolizing tr.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .button-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Luckiest Guy", sans-serif;
+}
+
+.purchase-text {
+  display: block;
+  margin: 40px 0 0 0;
+  padding-left: 20px;
+
 }
 
 .close-overlay-btn {
   display: block;
   margin-left: auto;
   margin-right: 0;
+  font-family: "Luckiest Guy", sans-serif;
+  font-weight: normal;
+  font-size: large;
 }
 
-#add-spending-el, #delete-btn-el {
-  border: 2px solid green;
-  border-radius: 5px;
-  background-color: antiquewhite;
-  padding: 10px 30px;
+#delete-btn-el {
+ background-color: rgb(225, 99, 99);
+ color: aliceblue;
+ border: none;
+ border-radius: 10px;
+ padding: 10px 20px; 
+ margin: 10px 10px;
+ font-family: "Luckiest Guy", sans-serif;
+ font-size: 20px;
+}
+
+#add-spending-el {
+  background-color: green;
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
   margin: 10px 15px;
-  font-size: 24px;
-  font-weight: 100;
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 20px;
 }
 
 .modal-overlay {
@@ -48,15 +91,42 @@ body {
   border: 2px solid green;
   border-radius: 5px;
   padding: 8px 15px;
-  margin-top: 10px;
+  margin-top: 30px;
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: small;
+  font-weight: normal;
 }
 
 .dashboard-panel-el {
-  width: 400px;
-  height: auto;
+  width: 410px;
+  height: 600px;
   background-color: antiquewhite;
   border: 2px solid green;
+  border-radius: 10px;
   display: block;
   margin-inline: auto;
-  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.form {
+  margin: 20px 10px;
+}
+
+input {
+  padding: 8px 0;
+  margin-bottom: 20px;
+  width: 200px;
+  font-size: 24px;
+  line-height: 0;
+}
+
+label {
+  margin: 0;
+  padding: 0;
+}
+
+#cash, #card {
+  width: 10px;
+  margin-bottom: 10px;
 }

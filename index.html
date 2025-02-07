@@ -4,44 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+
   <title>Spending Tracker</title>
 </head>
 <body>
-  <header class="heading-primary" id="heading-title">
-    <div class="logo-icon" id="icon">$(+)</div>
-    <h1 id="header-title">My Spending Tracker</h1>
-  </header>
-  <div class="button-section">
-    <button id="add-spending-el">Add Spending</button>
-    <button id="delete-btn-el">Delete Spending</button>
-  </div>
-  <!--start of modal section-->
-  <dialog class="modal-overlay">
-    <div class="modal-container">
-      <button class="close-overlay-btn">
-        &times;
-      </button>
-      <form class="form" method="dialog">
-        <label for="name-of-item">What did you buy?</label><br>
-        <input type="text" id="name-of-item" name="name-of-item"><br>
-        <label for="where">Where did you buy?</label><br>
-        <input type="text" id="where" name="where"><br>
-        <label for="cost-of-item">How much?</label><br>
-        <input type="number" id="cost-of-item" name="cost-of-item"><br>
-        <label class="payment-method">What did you use as payment method?</label><br>
-        <input type="radio" id="cash" name="payment-method" value="Cash">
-        <label for="cash">Cash</label><br>
-        <input type="radio" id="card" name="payment-method" value="Card">
-        <label for="card">Card</label><br>
-        <button class="submit-btn" type="submit">Submit</button>
-      </form>
+  <div class="whole-container">
+    <header class="heading-primary" id="heading-title">
+      <div class="logo-icon" id="icon"></div>
+      <h1 id="header-title">My Spending Tracker</h1>
+    </header>
+    <div class="button-section">
+      <button id="add-spending-el">Add Spending</button>
+      <button id="delete-btn-el">Delete Spending</button>
     </div>
-  </dialog>
+    
+    <!--start of modal section-->
+    <dialog class="modal-overlay">
+      <div class="modal-container">
+        <button class="close-overlay-btn">
+          &times;
+        </button>
+        <form class="form" method="dialog">
+          <label for="name-of-item">What did you buy?</label><br>
+          <input type="text" id="name-of-item" name="name-of-item"><br>
+          <label for="where">Where did you buy?</label><br>
+          <input type="text" id="where" name="where"><br>
+          <label for="cost-of-item">How much?</label><br>
+          <input type="number" id="cost-of-item" name="cost-of-item"><br>
+          <label class="payment-method">What did you use as payment method?</label><br>
+          <input type="radio" id="cash" name="payment-method" value="Cash">
+          <label for="cash">Cash</label><br>
+          <input type="radio" id="card" name="payment-method" value="Card">
+          <label for="card">Card</label><br>
+          <button class="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </dialog>
+  
   <!--end of modal section-->
+  <p class="purchase-text">Purchased Items:</p>
   <section class="dashboard-panel-el">
     <p id="panel-el"></p>
   </section>
   
   <script type="module" src="index.js"></script>
+</div>
 </body>
 </html>

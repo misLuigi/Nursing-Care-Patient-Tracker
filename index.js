@@ -91,15 +91,16 @@ onValue(referenceInDB, function(snapshot) {
   }
 })
 
-// Render data into the html (data cells) to visualize.
+// Render data into the html to visualize.
 function render(itemsData) {
   let listItems = ""
   for (let i=0; i < itemsData.length; i++) {
-    listItems += `
+    listItems += 
+    `
     <li>
     Name: ${itemsData[i].name}, 
     Store: ${itemsData[i].store}, 
-    Payment Method: ${itemsData[i].paymentMethod}, 
+    Payment Method: ${itemsData[i].methodOfPayment}, 
     Price: ${itemsData[i].price}</li>
     `
   }
