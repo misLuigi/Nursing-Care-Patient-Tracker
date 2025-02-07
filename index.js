@@ -102,7 +102,7 @@ function render(itemsData) {
       Name: ${itemsData[i].name}<br>
       Store: ${itemsData[i].store}<br>
       Price: ${itemsData[i].price}<br>
-      ayment Method: ${itemsData[i].methodOfPayment}
+      Payment Method: ${itemsData[i].methodOfPayment}
     </li>
     </div>
     `

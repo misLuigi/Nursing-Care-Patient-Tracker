@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Luckiest Guy", sans-serif;
-  background-color: rgb(220, 244, 220);
+  background-color: #dcf4dc;
 }
 
 .whole-container {
@@ -12,7 +12,7 @@ body {
   min-width: 450px;
   margin-top: 30px;
   margin-inline: auto;
-  background-color: rgb(118, 251, 127);
+  background-color: #76fb7f;
   padding: 10px;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 .logo-icon {
-  background-image: url("DALL·E 2025-02-07 15.05.02 - A playful and friendly logo for an app called 'Spending Tracker'. The logo features a stylized wallet with coins and bills popping out, symbolizing tr.webp");
+  background-image: url("./favicon_io/android-chrome-512x512.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 50px;
@@ -105,7 +105,7 @@ body {
 
 .dashboard-panel-el {
   width: 410px;
-  height: 600px;
+  height: auto;
   background-color: antiquewhite;
   border: 2px solid green;
   border-radius: 10px;
