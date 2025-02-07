@@ -56,6 +56,10 @@ body {
   font-family: "Luckiest Guy", sans-serif;
   font-weight: normal;
   font-size: large;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(225, 99, 99);
+  color: white;
 }
 
 #delete-btn-el {
@@ -82,9 +86,9 @@ body {
 
 .modal-overlay {
   border-radius: 10px;
-  box-shadow: 5px 5px 5px green;
+  box-shadow: 10px 5px 10px green;
   background-color: antiquewhite;
-
+  border: 5px solid green;
 }
 
 .submit-btn {
@@ -95,6 +99,8 @@ body {
   font-family: "Luckiest Guy", sans-serif;
   font-size: small;
   font-weight: normal;
+  background-color: green;
+  color: white;
 }
 
 .dashboard-panel-el {
@@ -109,16 +115,33 @@ body {
   padding: 10px;
 }
 
+#panel-el {
+  display: block;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid grey;
+  font-size: 14px;
+}
+
+li {
+  padding-top: 10px;
+  border-top: 1px solid grey;
+  list-style: none;
+}
+
 .form {
   margin: 20px 10px;
 }
 
 input {
-  padding: 8px 0;
+  padding: 8px 8px;
   margin-bottom: 20px;
   width: 200px;
   font-size: 24px;
   line-height: 0;
+  border: 2px solid green;
+  border-radius: 5px;
 }
 
 label {

@@ -95,13 +95,16 @@ onValue(referenceInDB, function(snapshot) {
 function render(itemsData) {
   let listItems = ""
   for (let i=0; i < itemsData.length; i++) {
-    listItems += 
+    listItems += // make it multiple divs. fix the display.
     `
+    <div>
     <li>
-    Name: ${itemsData[i].name}, 
-    Store: ${itemsData[i].store}, 
-    Payment Method: ${itemsData[i].methodOfPayment}, 
-    Price: ${itemsData[i].price}</li>
+      Name: ${itemsData[i].name}<br>
+      Store: ${itemsData[i].store}<br>
+      Price: ${itemsData[i].price}<br>
+      ayment Method: ${itemsData[i].methodOfPayment}
+    </li>
+    </div>
     `
   }
   panel.innerHTML = listItems;
@@ -113,3 +116,9 @@ deleteDataBtn.addEventListener("click", function() {
   remove(referenceInDB)
   panel.textContent = "Data Successfuly Deleted!"
 })
+
+//to do:
+//add total to the all price
+//fix display
+//make a edit button, delete button on every items.
+//add save button, so that we can have data every month.
